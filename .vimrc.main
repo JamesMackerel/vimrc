@@ -1,0 +1,76 @@
+" Include bundle
+source /home/jm/.vim/.vimrc.bundle
+
+" vim settings
+set shell=/bin/bash
+set nu
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set nowrap
+set hlsearch
+set pastetoggle=<f10>
+let g:mapleader=","
+
+set wildmenu wildmode=full
+set wildchar=<TAB> wildcharm=<C-Z>
+
+"set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" ctrlp settings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+            \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+            \ 'file': '\v\.(exe|so|dll)$',
+            \ 'link': 'some_bad_symbolic_links',
+            \ }
+"let g:ctrlp_user_command = 'find %s -type f'
+
+set wildignore+=*/node_modules/*
+set wildignore+=*/venv/*
+autocmd FileType vue syntax sync fromstart
+
+" color scheme
+"set t_Co=256
+set t_ut=
+"colorscheme 1989
+colorscheme gruvbox
+set background=dark
+
+" tab settings
+nnoremap <leader>n :tabn<CR>
+nnoremap <leader>p :tabp<CR>
+
+" maps
+noremap <C-e> :NERDTreeToggle<CR>
+nnoremap <leader>tn :tabe<cr>
+noremap <f8> :tabp<cr>
+noremap <f9> :tabn<cr>
+nmap <f2> :TagbarToggle<cr>
+
+" auto format
+au BufWrite * :Autoformat
+autocmd FileType yaml,yml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType javascript,html,vue setlocal ts=2 sts=2 sw=2 expandtab
+"autocmd FileType vim,tex let b:autoformat_autoindent=0
+
+set cursorline
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=#303000 ctermbg=234
+
+" YouCompleteMe
+let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
+let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
+let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
+let g:ycm_python_binary_path = 'python3'
+nnoremap gd :YcmCompleter GoTo<CR>
+
+" nerdtree
+let NERDTreeIgnore = ['\.pyc$', '^__pycache__$']
