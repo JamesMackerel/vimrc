@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Beautify
 Plugin 'morhetz/gruvbox'
+Plugin 'jacoborus/tender.vim'
 
 " Editor
 Plugin 'kien/ctrlp.vim'
@@ -32,6 +33,7 @@ Plugin 'scrooloose/nerdcommenter'
 "Plugin 'davidhalter/jedi-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
 Plugin 'tpope/vim-repeat'
 Plugin 'mattn/emmet-vim'
 Plugin 'jiangmiao/auto-pairs'
