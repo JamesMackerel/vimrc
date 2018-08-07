@@ -8,6 +8,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set nowrap
 set autoread
 set hlsearch
+set scrolloff=7
 set pastetoggle=<f10>
 let g:mapleader=","
 
@@ -55,9 +56,12 @@ nnoremap <leader>p :tabp<CR>
 
 " maps
 noremap <C-e> :NERDTreeToggle<CR>
-nnoremap <leader>tn :tabe<cr>
+nnoremap <leader>te :tabe<cr>
 noremap <f8> :tabp<cr>
+noremap <leader>tp :tabp<cr>
 noremap <f9> :tabn<cr>
+noremap <leader>tn :tabn<cr>
+noremap <leader>tc :tabclose<cr>
 nmap <f2> :TagbarToggle<cr>
 
 " auto format
