@@ -2,6 +2,7 @@
 source /home/jm/.vim/.vimrc.bundle
 
 " vim settings
+set encoding=utf-8
 set shell=/bin/bash
 set nu
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
@@ -10,6 +11,7 @@ set autoread
 set hlsearch
 set scrolloff=7
 set pastetoggle=<f10>
+set clipboard=unnamedplus
 let g:mapleader=","
 
 set wildmenu wildmode=full
@@ -65,7 +67,7 @@ noremap <leader>tc :tabclose<cr>
 nmap <f2> :TagbarToggle<cr>
 
 " auto format
-au BufWrite * :Autoformat
+noremap <F4> :Autoformat<CR>
 autocmd FileType yaml,yml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType javascript,html,vue setlocal ts=2 sts=2 sw=2 expandtab
 "autocmd FileType vim,tex let b:autoformat_autoindent=0
