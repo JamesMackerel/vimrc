@@ -1,5 +1,5 @@
 " Include bundle
-source /home/jm/.vim/.vimrc.bundle
+source ~/.vim/vimrc.bundle
 
 " vim settings
 set encoding=utf-8
@@ -33,7 +33,6 @@ let g:ctrlp_custom_ignore = {
             \ 'file': '\v\.(exe|so|dll)$',
             \ 'link': 'some_bad_symbolic_links',
             \ }
-"let g:ctrlp_user_command = 'find %s -type f'
 
 set wildignore+=*/node_modules/*
 set wildignore+=*/venv/*
@@ -43,9 +42,6 @@ autocmd FileType vue syntax sync fromstart
 set t_Co=256
 syntax enable
 set background=dark
-"set t_ut=
-"colorscheme 1989
-"colorscheme gruvbox
 colorscheme tender
 let g:airline_theme = 'tender'
 if (has("termguicolors"))
@@ -64,19 +60,21 @@ noremap <leader>tp :tabp<cr>
 noremap <f9> :tabn<cr>
 noremap <leader>tn :tabn<cr>
 noremap <leader>tc :tabclose<cr>
-nmap <f2> :TagbarToggle<cr>
+noremap <f2> :TagbarToggle<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>evb :vsplit ~/.vim/vimrc.bundle<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>idl :IndentLinesToggle<cr>
+nnoremap <leader>nu :set nu!<cr>
 
 " auto format
 noremap <F4> :Autoformat<CR>
+noremap <leader>ff :Autoformat<CR>
 autocmd FileType yaml,yml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType javascript,html,vue setlocal ts=2 sts=2 sw=2 expandtab
-"autocmd FileType vim,tex let b:autoformat_autoindent=0
+let g:formatters_htmldjango = ['htmlbeautify']
 
 set cursorline
-"hi cursorline cterm=none term=none
-"autocmd WinEnter * setlocal cursorline
-"autocmd WinLeave * setlocal nocursorline
-"highlight CursorLine guibg=#303000 ctermbg=234
 
 " YouCompleteMe
 let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
@@ -91,6 +89,7 @@ let NERDTreeIgnore = ['\.pyc$', '^__pycache__$']
 " vim-go
 nnoremap <leader>gb :GoBuild<cr>
 nnoremap <leader>gr :GoRun<cr>
+au BufRead,BufNewFile *.gohtml set filetype=gohtmltmpl
 
 " ultisnips
 let g:UltiSnipsExpandTrigger='<c-\>'

@@ -25,6 +25,9 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'kien/tabman.vim'
 Plugin 'ekalinin/dockerfile.vim'
 Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'tmhedberg/matchit'
+Plugin 'Yggdroot/indentLine'
+Plugin 'jlanzarotta/bufexplorer'
 
 "Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
@@ -46,7 +49,7 @@ Plugin 'fatih/vim-go'
 
 " Frontend
 Plugin 'posva/vim-vue'
-Plugin 'maksimr/vim-jsbeautify'
+"Plugin 'maksimr/vim-jsbeautify'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
