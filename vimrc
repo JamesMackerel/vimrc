@@ -61,11 +61,13 @@ noremap <f9> :tabn<cr>
 noremap <leader>tn :tabn<cr>
 noremap <leader>tc :tabclose<cr>
 noremap <f2> :TagbarToggle<cr>
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>evv :vsplit $MYVIMRC<cr>
 nnoremap <leader>evb :vsplit ~/.vim/vimrc.bundle<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>idl :IndentLinesToggle<cr>
 nnoremap <leader>nu :set nu!<cr>
+inoremap kj <esc>
+inoremap jk <esc>
 
 " auto format
 noremap <F4> :Autoformat<CR>
