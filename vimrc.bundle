@@ -28,6 +28,7 @@ Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'tmhedberg/matchit'
 Plugin 'Yggdroot/indentLine'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'terryma/vim-multiple-cursors'
 
 "Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'

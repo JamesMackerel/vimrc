@@ -66,7 +66,6 @@ nnoremap <leader>evb :vsplit ~/.vim/vimrc.bundle<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>idl :IndentLinesToggle<cr>
 nnoremap <leader>nu :set nu!<cr>
-inoremap kj <esc>
 inoremap jk <esc>
 
 " auto format
@@ -74,6 +73,7 @@ noremap <F4> :Autoformat<CR>
 noremap <leader>ff :Autoformat<CR>
 autocmd FileType yaml,yml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType javascript,html,vue setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 expandtab
 let g:formatters_htmldjango = ['htmlbeautify']
 
 set cursorline
