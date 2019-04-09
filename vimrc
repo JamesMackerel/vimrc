@@ -17,7 +17,12 @@ let g:mapleader=","
 set wildmenu wildmode=full
 set wildchar=<TAB> wildcharm=<C-Z>
 
-"set smartindent
+" place cursor to last edit position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+" set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -29,9 +34,8 @@ let g:ctrlp_working_path_mode = 'ra'
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
-            \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+            \ 'dir':  '\v[\/](\.(git|hg|svn)|vendor)$',
             \ 'file': '\v\.(exe|so|dll)$',
-            \ 'link': 'some_bad_symbolic_links',
             \ }
 
 set wildignore+=*/node_modules/*
@@ -89,8 +93,9 @@ nnoremap gd :YcmCompleter GoTo<CR>
 let NERDTreeIgnore = ['\.pyc$', '^__pycache__$']
 
 " vim-go
-nnoremap <leader>gb :GoBuild<cr>
-nnoremap <leader>gr :GoRun<cr>
+autocmd FileType go nnoremap <buffer> <leader>gb :GoBuild<cr>
+autocmd FileType go nnoremap <buffer> <leader>gr :GoRun<cr>
+autocmd FileType go nnoremap <buffer> <leader>gt :GoTest<cr>
 au BufRead,BufNewFile *.gohtml set filetype=gohtmltmpl
 
 " ultisnips
