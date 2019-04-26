@@ -102,4 +102,4 @@ autocmd FileType go nnoremap <buffer> <leader>gt :GoTest<cr>
 au BufRead,BufNewFile *.gohtml set filetype=gohtmltmpl
 
 " ultisnips
-let g:UltiSnipsExpandTrigger='<c-\>'
+let g:UltiSnipsExpandTrigger='<c-f>'
