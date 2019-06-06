@@ -79,6 +79,7 @@ autocmd FileType yaml,yml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType javascript,html,vue setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 expandtab
 let g:formatters_htmldjango = ['htmlbeautify']
+let g:formatters_gohtmltmpl = ['htmlbeautify']
 
 set cursorline
 
@@ -99,4 +100,9 @@ autocmd FileType go nnoremap <buffer> <leader>gt :GoTest<cr>
 au BufRead,BufNewFile *.gohtml set filetype=gohtmltmpl
 
 " ultisnips
-let g:UltiSnipsExpandTrigger='<c-\>'
+let g:UltiSnipsExpandTrigger='<c-f>'
+
+" indentLine
+autocmd Filetype json let g:indentLine_enabled = 0
+
+set nomodeline

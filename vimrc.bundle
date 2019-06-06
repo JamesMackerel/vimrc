@@ -16,23 +16,21 @@ Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
-Plug 'bling/vim-bufferline'
+"Plug 'bling/vim-bufferline'
 Plug 'Valloric/YouCompleteMe'
 Plug 'Chiel92/vim-autoformat'
 Plug 'kien/tabman.vim'
 Plug 'ekalinin/dockerfile.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'tmhedberg/matchit'
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'terryma/vim-multiple-cursors'
 
-"Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 
 " Programming
-"Plug 'davidhalter/jedi-vim'
 Plug 'scrooloose/syntastic'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
@@ -46,7 +44,5 @@ Plug 'fatih/vim-go'
 
 " Frontend
 Plug 'posva/vim-vue'
-"Plug 'pangloss/vim-javascript'
-"Plug 'maksimr/vim-jsbeautify'
 
 call plug#end()
