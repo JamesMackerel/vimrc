@@ -11,7 +11,7 @@ set autoread
 set hlsearch
 set scrolloff=7
 set pastetoggle=<f10>
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 let g:mapleader=","
 
 set wildmenu wildmode=full
@@ -71,6 +71,8 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>idl :IndentLinesToggle<cr>
 nnoremap <leader>nu :set nu!<cr>
 inoremap jk <esc>
+vnoremap <leader>yy "+y
+nnoremap <leader>yp "+p
 
 " auto format
 noremap <F4> :Autoformat<CR>

@@ -23,7 +23,7 @@ Plug 'kien/tabman.vim'
 Plug 'ekalinin/dockerfile.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'tmhedberg/matchit'
-"Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'terryma/vim-multiple-cursors'
 
