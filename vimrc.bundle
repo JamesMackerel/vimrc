@@ -12,7 +12,9 @@ Plug 'morhetz/gruvbox'
 Plug 'jacoborus/tender.vim'
 
 " Editor
-Plug 'kien/ctrlp.vim'
+"Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'

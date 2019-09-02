@@ -28,15 +28,18 @@ set shiftwidth=4
 set expandtab
 
 " ctrlp settings
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
+"let g:ctrlp_map = '<c-p>'
+"let g:ctrlp_cmd = 'CtrlP'
+"let g:ctrlp_working_path_mode = 'ra'
 
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = {
-            \ 'dir':  '\v[\/](\.(git|hg|svn)|vendor)$',
-            \ 'file': '\v\.(exe|so|dll)$',
-            \ }
+"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+"let g:ctrlp_custom_ignore = {
+            "\ 'dir':  '\v[\/](\.(git|hg|svn)|vendor)$',
+            "\ 'file': '\v\.(exe|so|dll)$',
+            "\ }
+
+" fzf settings
+nnoremap <C-p> :FZF<CR>
 
 set wildignore+=*/node_modules/*
 set wildignore+=*/venv/*
@@ -46,7 +49,7 @@ autocmd FileType vue syntax sync fromstart
 set t_Co=256
 syntax enable
 set background=dark
-colorscheme tender
+colorscheme 1989
 let g:airline_theme = 'tender'
 if (has("termguicolors"))
     set termguicolors
