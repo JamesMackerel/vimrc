@@ -93,6 +93,9 @@ let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags
 let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
 let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
 let g:ycm_python_binary_path = 'python3'
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 nnoremap gd :YcmCompleter GoTo<CR>
 
 " nerdtree
